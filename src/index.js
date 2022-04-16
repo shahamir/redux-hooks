@@ -10,6 +10,7 @@ import { Booking } from "./components/booking/Booking";
 import { Todo } from "./components/todo/Todo";
 import { Posts } from "./components/posts/Posts";
 import { Nav } from "./components/nav/Nav";
+import { NetlifyFunctionTests } from "./components/netlifyFunctionTest/NetlifyFunctionTest";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route path="/booking" element={<Booking />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/netlify" element={<NetlifyFunctionTests />} />
         </Routes>
       </BrowserRouter>
     </AppStateProvider>
