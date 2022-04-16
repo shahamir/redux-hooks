@@ -1,6 +1,6 @@
 import React from "react";
-import { addTodo } from "../../reducers/todoReducer";
 import { useAppState } from "../../store/Store";
+import { addTodo } from "./actions/todoActions";
 
 export const TodoForm = () => {
   const [, dispatch] = useAppState();
@@ -8,7 +8,9 @@ export const TodoForm = () => {
 
   const handleOnclick = () => {
     console.log("Value: ", value);
-    dispatch(addTodo({ todo: value, id: crypto.randomUUID() }));
+    dispatch(
+      addTodo({ todo: value ? value : "Empty", id: crypto.randomUUID() })
+    );
   };
   return (
     <div style={{ gridArea: "c" }}>

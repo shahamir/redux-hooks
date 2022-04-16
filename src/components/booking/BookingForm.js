@@ -32,18 +32,6 @@ const BookingForm = () => {
     dispatch(addBooking(bookingFactory(form)));
   };
 
-  const formStyle = {
-    formControl: {
-      margin: "16pt",
-    },
-    input: {
-      margin: "0 16pt",
-    },
-    label: {
-      minWidth: "400px",
-    },
-  };
-
   return (
     <>
       <div className="form">

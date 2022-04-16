@@ -19,5 +19,8 @@ export const todoReducer = (state = todoInitialState, action) => {
         todos: state.todos.filter((todo) => todo.id !== action.todo.id),
       };
     }
+    default: {
+      return state;
+    }
   }
 };

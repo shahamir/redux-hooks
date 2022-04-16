@@ -2,7 +2,7 @@ import React from "react";
 import { useAppState } from "../../store/Store";
 
 export const TodoList = () => {
-  const [state, dispatch] = useAppState();
+  const [state] = useAppState();
   const { todos } = state;
 
   console.log(todos);

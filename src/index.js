@@ -9,18 +9,18 @@ import { AppStateProvider } from "./store/Store";
 import { Booking } from "./components/booking/Booking";
 import { Todo } from "./components/todo/Todo";
 import { Posts } from "./components/posts/Posts";
-import { Home } from "./components/home/Home";
+import { Nav } from "./components/nav/Nav";
 
 ReactDOM.render(
   <React.StrictMode>
     <AppStateProvider initialState={initialState} reducer={appReducers}>
       <BrowserRouter>
+        <Nav></Nav>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route path="booking" element={<Booking />} />
-            <Route path="todo" element={<Todo />} />
-            <Route path="posts" element={<Posts />} />
-          </Route>
+          <Route path="/" element={<App />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/posts" element={<Posts />} />
         </Routes>
       </BrowserRouter>
     </AppStateProvider>
@@ -31,4 +31,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);

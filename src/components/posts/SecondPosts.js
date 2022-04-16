@@ -2,7 +2,7 @@ import React from "react";
 import { useAppState } from "../../store/Store";
 
 export const SecondPosts = () => {
-  const [state, dispatch] = useAppState();
+  const [state] = useAppState();
 
   return (
     <div style={{ gridArea: "f" }}>

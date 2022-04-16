@@ -1,5 +1,6 @@
 export const FETCH_SUCESS = "APP/POSTS/FETCH_SUCESS";
 export const FETCH_ERROR = "APP/POSTS/FETCH_ERROR";
+export const FETCH_LOADING = "APP/POSTS/LOADING";
 
 export const postsReducersInitialState = {
   posts: {
@@ -17,6 +18,10 @@ export const fetchSuccess = (result) => ({
 export const fetchError = (result) => ({
   type: FETCH_ERROR,
   result,
+});
+
+export const fetchLoading = () => ({
+  type: FETCH_LOADING,
 });
 
 export const postReducer = (state, action) => {
@@ -40,6 +45,19 @@ export const postReducer = (state, action) => {
           error: "Failed to fetch!",
         },
       };
+    }
+    case FETCH_LOADING: {
+      return {
+        ...state,
+        posts: {
+          loading: true,
+          post: {},
+          error: "",
+        },
+      };
+    }
+    default: {
+      return state;
     }
   }
 };

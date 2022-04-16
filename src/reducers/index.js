@@ -1,10 +1,16 @@
-import { bookTableReducer } from "../components/booking/reducers/bookTableReducers";
-import { todoReducer } from "../components/todo/reducers/todoReducer";
+import {
+  bookTableReducer,
+  bookTableReducerInitialState,
+} from "../components/booking/reducers/bookTableReducers";
+import {
+  todoInitialState,
+  todoReducer,
+} from "../components/todo/reducers/todoReducer";
 import { postReducer, postsReducersInitialState } from "./postsReducer";
 
 const initialState = {
-  bookings: [],
-  todos: [],
+  ...bookTableReducerInitialState,
+  ...todoInitialState,
   ...postsReducersInitialState,
 };
 
