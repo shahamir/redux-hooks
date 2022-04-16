@@ -11,7 +11,10 @@ export const FirstPosts = () => {
     dispatch(fetchLoading());
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts/1")
-        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          return response.json();
+        })
         .then((data) =>
           dispatch(fetchSuccess({ payload: data, error: "Sucess" }))
         );
