@@ -16,6 +16,7 @@ export const Nav = () => {
         <Link to="/todo">Todo</Link>
         <Link to="/posts">Posts</Link>
         <Link to="/netlify">Netlify</Link>
+        <Link to="/traffic">Traffic</Link>
       </div>
     </nav>
   );
